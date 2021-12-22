@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--background picture -->
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/mariobackg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <!--creates the top row with current turn-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="10dp"
+                    android:onClick="ins"
+                    android:src="@drawable/infoicon"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="3dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="5dp"
+                    android:text="Current Turn:"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/turn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/marioturn" />
+
+            </LinearLayout>
+
+            <!--tic tac toe board-->
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="3"
+                android:rowCount="3">
+
+                <ImageView
+                    android:id="@+id/a"
+                    android:layout_width="89dp"
+                    android:layout_height="89dp"
+                    android:layout_margin="10dp"
+                    android:onClick="aClick"
+                    android:src="@drawable/blankbox" />
+
+                <ImageView
+                    android:id="@+id/b"
+                    android:layout_width="89dp"
+                    android:layout_height="89dp"
+                    android:layout_margin="10dp"
+                    android:onClick="bClick"
+                    android:src="@drawable/blankbox" />
+
+                <ImageView
+                    android:id="@+id/c"
+                    android:layout_width="89dp"
+                    android:layout_height="89dp"
+                    android:layout_margin="10dp"
+                    android:onClick="cClick"
+                    android:src="@drawable/blankbox" />
+
+                <ImageView
+                    android:id="@+id/d"
+                    android:layout_width="89dp"
+                    android:layout_height="89dp"
+                    android:layout_margin="10dp"
+                    android:onClick="dClick"
+                    android:src="@drawable/blankbox" />
+
+                <ImageView
+                    android:id="@+id/e"
+                    android:layout_width="89dp"
+                    android:layout_height="89dp"
+                    android:layout_margin="10dp"
+                    android:onClick="eClick"
+                    android:src="@drawable/blankbox" />
+
+                <ImageView
+                    android:id="@+id/f"
+                    android:layout_width="89dp"
+                    android:layout_height="89dp"
+                    android:layout_margin="10dp"
+                    android:onClick="fClick"
+                    android:src="@drawable/blankbox" />
+
+                <ImageView
+                    android:id="@+id/g"
+                    android:layout_width="89dp"
+                    android:layout_height="89dp"
+                    android:layout_margin="10dp"
+                    android:onClick="gClick"
+                    android:src="@drawable/blankbox" />
+
+                <ImageView
+                    android:id="@+id/h"
+                    android:layout_width="89dp"
+                    android:layout_height="89dp"
+                    android:layout_margin="10dp"
+                    android:onClick="hClick"
+                    android:src="@drawable/blankbox" />
+
+                <ImageView
+                    android:id="@+id/i"
+                    android:layout_width="89dp"
+                    android:layout_height="89dp"
+                    android:layout_margin="10dp"
+                    android:onClick="iClick"
+                    android:src="@drawable/blankbox" />
+            </GridLayout>
+
+            <!--buttons at the bottom-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="28dp"
+                android:orientation="horizontal"
+                android:padding="6dp">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="12dp"
+                    android:onClick="home"
+                    android:src="@drawable/homebut" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#C4599721"
+                    android:onClick="reset"
+                    android:padding="7dp"
+                    android:text="Reset"
+                    android:textColor="#fff"
+                    android:textSize="23sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#C4599721"
+                    android:onClick="reset"
+                    android:padding="7dp"
+                    android:text="Play Again"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

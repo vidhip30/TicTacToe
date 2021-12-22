@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--background picture-->
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/mariobackg" />
+        <!--makes a scrollview-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="5dp"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="170dp"
+                            android:layout_marginRight="3dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:padding="5dp"
+                            android:text="Game Instructions"
+                            android:textColor="#fff"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+
+                    <!--text and screen snapshots-->
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"
+                            android:gravity="center_horizontal"
+                            android:padding="5dp"
+                            android:text="The goal of this game is to get 3 in a row for your character."
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="180dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/gamesnap" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"
+                            android:gravity="center_horizontal"
+                            android:padding="5dp"
+                            android:text="Take turns placing your character on a blank space (question mark block) or switch an opponent's character to yours."
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="240dp"
+                            android:layout_height="56dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/topsnap" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center_horizontal"
+                            android:padding="5dp"
+                            android:text="At the top, it will display whose turn it is. To the left is an information icon which will bring you back to the instructions if forget."
+                            android:textColor="#FFFFFF"
+                            android:textSize="18sp" />
+
+                        <Switch
+                            android:id="@+id/switchmusic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:checked="false"
+                            android:onClick="music"
+                            android:text="Music Preferences"
+                            android:textColor="#fff"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="27dp"
+                            android:text="Ready to play?"
+                            android:textColor="#fff"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <!--radio buttons-->
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30dp"
+                            android:onClick="play"
+                            android:text="Yes"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#fff" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:onClick="Home"
+                            android:text="No"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="#fff" />
+                    </RadioGroup>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>
